@@ -27,7 +27,7 @@ The following scripts are defined in the `package.json` file. These commands hel
 - **`npm run preview`**  
   Serves the built files from the `dist/` directory in a local server.  
   - Useful for testing the production build locally before deployment.  
-  - The preview server is accessible at [http://localhost:4173](http://localhost:4173).
+  - The preview server is accessible at [http://localhost:5173](http://localhost:5173).
 
 - **`npm test`**  
   Placeholder for running tests.  
