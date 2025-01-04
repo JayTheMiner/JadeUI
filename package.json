@@ -1,0 +1,20 @@
+{
+    "name": "jadeui",
+    "version": "1.0.0",
+    "description": "Lit based opensource UI component",
+    "main": "index.js",
+    "scripts": {
+        "start": "vite --config config/vite.config.js",
+        "dev": "vite --config config/vite.config.js",
+        "build": "vite build --config config/vite.config.js",
+        "preview": "vite preview --config config/vite.config.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "lit": "^3.2.1",
+        "vite": "^6.0.7"
+    }
+}
