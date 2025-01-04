@@ -1,3 +1,6 @@
+import './components/JdButton.js';
+
+
 import { LitElement, html, css } from 'lit';
 
 class MyElement extends LitElement {

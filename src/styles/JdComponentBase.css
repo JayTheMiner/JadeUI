@@ -1,0 +1,11 @@
+:host {
+    display: block;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+:host([disabled]) {
+    opacity: 0.5;
+    pointer-events: none;
+    background-color: #f9f9f9;
+}
