@@ -1,8 +1,8 @@
 import { LitElement, unsafeCSS } from 'lit';
-import styles from '../styles/JdComponentBase.css'; // CSS 파일 로드
+import JdComponentBaseCss from '../styles/JdComponentBase.css';
 
 export class JdComponentBase extends LitElement {
-    static styles = unsafeCSS(styles); // CSS를 unsafeCSS로 래핑하여 사용
+    static styles = unsafeCSS(JdComponentBaseCss);
 
     static properties = {
         disabled: { type: Boolean },

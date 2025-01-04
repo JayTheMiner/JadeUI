@@ -1,11 +1,12 @@
+/* 공통 CSS 변수 정의 */
+:host {
+    --jd-disabled-bg: #f9f9f9;
+    --jd-disabled-opacity: 0.5;
+}
+
+/* 기본 스타일 */
 :host {
     display: block;
     box-sizing: border-box;
     padding: 10px;
-}
-
-:host([disabled]) {
-    opacity: 0.5;
-    pointer-events: none;
-    background-color: #f9f9f9;
 }

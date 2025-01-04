@@ -1,23 +1,70 @@
+/* CSS 커스텀 속성 정의 */
+:host {
+    --jd-button-width: auto;
+    --jd-button-bg: #007bff;
+    --jd-button-color: #fff;
+    --jd-button-hover-bg: #0056b3;
+    --jd-button-disabled-bg: var(--jd-disabled-bg);
+    --jd-button-disabled-color: #666;
+    --jd-button-text-color: #007bff;
+    --jd-button-outline-color: #007bff;
+}
+
+/* 기본 버튼 스타일 */
 :host {
     display: inline-block;
+    width: var(--jd-button-width);
 }
 
+/* 버튼 요소 스타일 */
 button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     padding: 8px 16px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    font-weight: 500;
+    border: 1px solid transparent;
     border-radius: 4px;
-    background-color: #f0f0f0;
-    color: #333;
     cursor: pointer;
-    transition: background-color 0.2s;
+    background-color: var(--jd-button-bg);
+    color: var(--jd-button-color);
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
+/* 버튼 hover 상태 */
 button:hover {
-    background-color: #e0e0e0;
+    background-color: var(--jd-button-hover-bg);
 }
 
+/* 버튼 disabled 상태 */
 button:disabled {
-    background-color: #ccc;
+    background-color: var(--jd-button-disabled-bg);
+    color: var(--jd-button-disabled-color);
     cursor: not-allowed;
+}
+
+/* 텍스트 버튼 스타일 */
+:host([variant='text']) button {
+    background-color: transparent;
+    color: var(--jd-button-text-color);
+}
+
+/* 외곽선 버튼 스타일 */
+:host([variant='outlined']) button {
+    background-color: transparent;
+    border-color: var(--jd-button-outline-color);
+    color: var(--jd-button-outline-color);
+}
+
+/* 전체 너비 버튼 */
+:host([fullWidth]) {
+    width: 100%;
+}
+
+/* 아이콘 스타일 */
+.icon {
+    font-size: 20px;
+    line-height: 0;
 }
