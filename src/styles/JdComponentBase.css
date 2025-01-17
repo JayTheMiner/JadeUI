@@ -1,10 +1,26 @@
-/* 공통 CSS 변수 정의 */
+/* JadeUI component's common styles base variables */
 :host {
     --jd-disabled-bg: #f9f9f9;
     --jd-disabled-opacity: 0.5;
+
+    /* base colors */
+    --jd-basecolor-text: #0c0c0c;
+    /* 기본 텍스트 색상 */
+    --jd-basecolor-common: #007bff;
+    /* 기본 파란색 */
+    --jd-basecolor-success: #28a745;
+    /* 성공: 녹색 */
+    --jd-basecolor-fail: #dc3545;
+    /* 실패: 빨간색 */
+    --jd-basecolor-warning: #ffc107;
+    /* 경고: 노란색 */
+    --jd-basecolor-danger: #dc3545;
+    /* 위험: 빨간색 */
+    --jd-basecolor-info: #17a2b8;
+    /* 정보: 청록색 */
 }
 
-/* 기본 스타일 */
+/* JadeUI component's common styles base */
 :host {
     display: block;
     box-sizing: border-box;
