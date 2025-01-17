@@ -1,22 +1,26 @@
 /* CSS 커스텀 속성 정의 */
 :host {
     --jd-button-width: auto;
-    --jd-button-bg: #007bff;
-    --jd-button-color: #fff;
-    --jd-button-hover-bg: #0056b3;
+    --jd-button-bg: transparent;
+    /* 기본 배경색 */
+    --jd-button-color: var(--jd-basecolor-text);
+    /* 기본 텍스트 색상 */
+    --jd-button-hover-bg: #e9ecef;
+    /* 기본 hover 배경색 */
+    --jd-button-border-color: #ccc;
+    /* 기본 테두리 색상 */
     --jd-button-disabled-bg: var(--jd-disabled-bg);
+    /* 비활성화 배경색 */
     --jd-button-disabled-color: #666;
-    --jd-button-text-color: #007bff;
-    --jd-button-outline-color: #007bff;
+    /* 비활성화 텍스트 색상 */
 }
 
-/* 기본 버튼 스타일 */
+/* 기본 스타일 (default) */
 :host {
     display: inline-block;
     width: var(--jd-button-width);
 }
 
-/* 버튼 요소 스타일 */
 button {
     display: flex;
     align-items: center;
@@ -25,7 +29,7 @@ button {
     padding: 8px 16px;
     font-size: 16px;
     font-weight: 500;
-    border: 1px solid transparent;
+    border: 1px solid var(--jd-button-border-color);
     border-radius: 4px;
     cursor: pointer;
     background-color: var(--jd-button-bg);
@@ -33,32 +37,66 @@ button {
     transition: background-color 0.3s, border-color 0.3s;
 }
 
-/* 버튼 hover 상태 */
 button:hover {
     background-color: var(--jd-button-hover-bg);
 }
 
-/* 버튼 disabled 상태 */
+/* Disabled 상태 */
 button:disabled {
     background-color: var(--jd-button-disabled-bg);
     color: var(--jd-button-disabled-color);
     cursor: not-allowed;
 }
 
-/* 텍스트 버튼 스타일 */
+/* Common 스타일 (variant='common') */
+:host([variant='common']) button {
+    background-color: var(--jd-basecolor-common);
+    color: #fff;
+    border: none;
+}
+
+:host([variant='common']) button:hover {
+    background-color: #0056b3;
+    /* 하드코딩 가능 */
+}
+
+/* Text 스타일 (variant='text') */
 :host([variant='text']) button {
     background-color: transparent;
-    color: var(--jd-button-text-color);
+    color: var(--jd-basecolor-common);
+    border: none;
 }
 
-/* 외곽선 버튼 스타일 */
-:host([variant='outlined']) button {
-    background-color: transparent;
-    border-color: var(--jd-button-outline-color);
-    color: var(--jd-button-outline-color);
+:host([variant='text']) button:hover {
+    background-color: #f0f0f0;
+    /* 하드코딩 가능 */
 }
 
-/* 전체 너비 버튼 */
+/* Success 스타일 (color='success') */
+:host([color='success']) button {
+    background-color: var(--jd-basecolor-success);
+    color: #fff;
+    border: none;
+}
+
+:host([color='success']) button:hover {
+    background-color: #218838;
+    /* 하드코딩 가능 */
+}
+
+/* Error 스타일 (color='error') */
+:host([color='error']) button {
+    background-color: var(--jd-basecolor-fail);
+    color: #fff;
+    border: none;
+}
+
+:host([color='error']) button:hover {
+    background-color: #c82333;
+    /* 하드코딩 가능 */
+}
+
+/* Full Width 스타일 */
 :host([fullWidth]) {
     width: 100%;
 }
